@@ -1,12 +1,8 @@
-const express = require('express');
-const { use } = require('./router/raiz.router');
-const app = express();
-
+//datos del servidor
+const app = require("./server");
+//puerto del servidor
 const port = process.env.PORT || 3000;
-const rutaRaiz = require("./router/raiz.router");
-
-app.use("/", rutaRaiz);
-
+//inicializando el servidor en le puerto 3000 o en el que le asigne por defecto el servidor
 app.listen(port, ()=>{
     console.log("servidor en el puerto: " + port);
 });

@@ -1,11 +1,17 @@
 const { Sequelize, DataTypes, Model } = require('sequelize');
 const sequelize = require("../db");
 
-class Posts extends Model {};
+class Post extends Model {};
 
 Post.init({
-    title : DataTypes.String,
-    body : DataType.Text,
+    title: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    body: {
+        type: DataTypes.TEXT,
+        allowNull: false
+    },
 },{
     sequelize,
     modelName : "post"

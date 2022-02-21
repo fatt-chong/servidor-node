@@ -9,7 +9,7 @@ app.listen(port, ()=>{
     console.log("servidor en el puerto: " + port);
     //conexion a la DB 
     
-    sequelize.sync({force: false}).then(()=>{
+    sequelize.sync({force: true}).then(()=>{
         console.log("conectado a la DB");
     }).catch((err)=>{
         console.log("error en: " + err.message);

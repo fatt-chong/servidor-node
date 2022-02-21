@@ -29,10 +29,13 @@ exports.userList = (req, res) => {
 exports.userRegister = (req, res) => {
 
     User.create({
-        firstName : "fatt guillermo",
-        lastName : "chong"
+        name : req.body.name,
+        age : req.body.age,
+        email: req.body.email
     }).then(user=>{
         res.json(user);
+    }).catch((err) => {
+        res.status(500).json(err);
     });
     
 };

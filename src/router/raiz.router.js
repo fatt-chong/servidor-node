@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
 });
 
 //ruta para registrar el usuario
-router.get("/usuarios", UserController.userRegister);
+router.post("/usuarios", UserController.userRegister);
 //ruta para listar el usuarios
 router.get("/usuarios/listar", UserController.userList);
 

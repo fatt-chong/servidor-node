@@ -8,10 +8,10 @@ const port = process.env.PORT || 3000;
 app.listen(port, ()=>{
     console.log("servidor en el puerto: " + port);
     //conexion a la DB
-    /*
+    
     sequelize.authenticate().then(()=>{
         console.log("conectado a la DB");
     }).catch((err)=>{
         console.log("error en: " + err.message);
-    });;*/
+    });;
 });
